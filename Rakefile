@@ -1,15 +1,17 @@
-require 'rubygems' unless ENV['NO_RUBYGEMS']
-%w[rake rake/clean fileutils newgem rubigen].each { |f| require f }
+%w[hoe rake rake/clean fileutils newgem rubigen].each { |f| require f }
 require File.dirname(__FILE__) + '/lib/has_set'
 
+Hoe.plugin :newgem
+Hoe.plugins.delete :rubyforge
+Hoe.plugins.delete :test
 # Generate all the Rake tasks
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
-$hoe = Hoe.new('has_set', HasSet::VERSION) do |p|
+$hoe = Hoe.spec('has_set' ) do |p|
   p.developer('pkw.de Dev Team', 'dev@pkw.de')
   p.changes              = p.paragraphs_of("History.txt", 0..1).join("\n\n")
   p.extra_deps         = [
-    ['activerecord', '>= 2.3.2'],
-    ['activesupport', '>= 2.3.2']
+    ['activerecord', '~> 2.3.2'],
+    ['activesupport', '~> 2.3.2']
   ]
   p.extra_dev_deps = [
     ['newgem', ">= #{::Newgem::VERSION}"],

@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["pkw.de Dev Team"]
-  s.date = %q{2009-05-13}
+  s.date = %q{2011-04-01}
   s.description = %q{A simple Gem to enable any `ActiveRecord::Base` object to store a set of attributes in a set like structure represented through a bitfield on the database level.
 
 You only have to specify the name of the set to hold the attributes in question an the rest is done for you through some fine selected Ruby magic. Here is a simple example of how you could use the gem:
@@ -43,41 +43,40 @@ Here is a simple example of how to implement such a enumeration type while using
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
   s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "has_set.gemspec", "lib/has_set.rb", "script/console", "script/destroy", "script/generate", "test/has_set_test.rb", "test/test_helper.rb"]
   s.homepage = %q{http://github.com/pkwde/has_set}
-  s.rdoc_options = ["--main", "README.txt"]
+  s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{has_set}
-  s.rubygems_version = %q{1.3.3}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{A Gem that enables ActiveRecord models to have a set of values defined in a certain class and stored in an integer bitfield on the database level.}
   s.test_files = ["test/test_helper.rb"]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activerecord>, [">= 2.3.2"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.2"])
-      s.add_development_dependency(%q<newgem>, [">= 1.3.0"])
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<activerecord>, ["~> 2.3.2"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 2.3.2"])
+      s.add_development_dependency(%q<newgem>, [">= 1.5.3"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
       s.add_development_dependency(%q<pkwde-renum>, [">= 0"])
       s.add_development_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_development_dependency(%q<hoe>, [">= 1.8.0"])
+      s.add_development_dependency(%q<hoe>, [">= 2.9.2"])
     else
-      s.add_dependency(%q<activerecord>, [">= 2.3.2"])
-      s.add_dependency(%q<activesupport>, [">= 2.3.2"])
-      s.add_dependency(%q<newgem>, [">= 1.3.0"])
+      s.add_dependency(%q<activerecord>, ["~> 2.3.2"])
+      s.add_dependency(%q<activesupport>, ["~> 2.3.2"])
+      s.add_dependency(%q<newgem>, [">= 1.5.3"])
       s.add_dependency(%q<mocha>, [">= 0"])
       s.add_dependency(%q<pkwde-renum>, [">= 0"])
       s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_dependency(%q<hoe>, [">= 1.8.0"])
+      s.add_dependency(%q<hoe>, [">= 2.9.2"])
     end
   else
-    s.add_dependency(%q<activerecord>, [">= 2.3.2"])
-    s.add_dependency(%q<activesupport>, [">= 2.3.2"])
-    s.add_dependency(%q<newgem>, [">= 1.3.0"])
+    s.add_dependency(%q<activerecord>, ["~> 2.3.2"])
+    s.add_dependency(%q<activesupport>, ["~> 2.3.2"])
+    s.add_dependency(%q<newgem>, [">= 1.5.3"])
     s.add_dependency(%q<mocha>, [">= 0"])
     s.add_dependency(%q<pkwde-renum>, [">= 0"])
     s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-    s.add_dependency(%q<hoe>, [">= 1.8.0"])
+    s.add_dependency(%q<hoe>, [">= 2.9.2"])
   end
 end

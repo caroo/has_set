@@ -1,8 +1,10 @@
+.Rakefile.swp
 History.txt
 Manifest.txt
-README.txt
+README.rdoc
 Rakefile
 has_set.gemspec
+lib/.has_set.rb.swp
 lib/has_set.rb
 script/console
 script/destroy
