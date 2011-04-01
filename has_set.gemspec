@@ -40,8 +40,8 @@ Here is a simple example of how to implement such a enumeration type while using
       end
     end}
   s.email = ["dev@pkw.de"]
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
-  s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "has_set.gemspec", "lib/has_set.rb", "script/console", "script/destroy", "script/generate", "test/has_set_test.rb", "test/test_helper.rb"]
+  s.extra_rdoc_files = ["History.txt", "Manifest.txt"]
+  s.files = [".Rakefile.swp", "History.txt", "Manifest.txt", "README.rdoc", "Rakefile", "has_set.gemspec", "lib/.has_set.rb.swp", "lib/has_set.rb", "script/console", "script/destroy", "script/generate", "test/has_set_test.rb", "test/test_helper.rb"]
   s.homepage = %q{http://github.com/pkwde/has_set}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
