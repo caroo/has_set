@@ -5,7 +5,7 @@ require 'mocha'
 
 require File.dirname(__FILE__) + '/../lib/has_set'
 
-ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => ":memory:")
+ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 ActiveRecord::Migration.verbose = false
 
 def setup_db
@@ -88,4 +88,3 @@ class Party < ActiveRecord::Base
 end
 
 teardown_db # And drop them right afterwards
-
